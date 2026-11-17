@@ -1,0 +1,9 @@
+A3R_repo/
+figures/
+parity_run/
+.venv*/
+__pycache__/
+.pytest_cache/
+bin/
+obj/
+*.pyc

@@ -1,0 +1,6286 @@
+{
+ "master_seed": 20261113,
+ "bootstrap": 1000,
+ "sim_defaults": {
+  "duration": 120.0,
+  "gap_mean": 12.0,
+  "gap_min": 3.0,
+  "p_sustained": 0.3,
+  "sustained_range": [
+   5.0,
+   20.0
+  ],
+  "transient_range": [
+   0.2,
+   2.0
+  ],
+  "fixed_durations": null,
+  "tau": 0.3,
+  "T": 0.4,
+  "base_margin": [
+   0.06,
+   0.18
+  ],
+  "elev_margin": [
+   0.05,
+   0.2
+  ],
+  "noise_sd": 0.04,
+  "noise_rho": 0.5,
+  "f_mp": 4.5,
+  "mp_jitter": 0.2,
+  "latency": [
+   0.015,
+   0.045
+  ],
+  "extra_delay": 0.0,
+  "update_interval": 0.5,
+  "frame_quant": 0.016666666666666666,
+  "dropout_rate": 0.0,
+  "dropout_range": [
+   0.3,
+   3.0
+  ]
+ },
+ "controller_active": {
+  "t_conf": 0.4,
+  "t_frust": 0.65,
+  "dwell": 3.0,
+  "cooldown": 15.0,
+  "max_per_step": 3,
+  "use_dwell": true,
+  "use_cooldown": true,
+  "use_step_cap": true,
+  "hysteresis": 0.0,
+  "dropout_policy": "reset"
+ },
+ "variants": {
+  "V0 threshold only": {
+   "use_dwell": false,
+   "use_cooldown": false,
+   "use_step_cap": false
+  },
+  "V1 + dwell": {
+   "use_dwell": true,
+   "use_cooldown": false,
+   "use_step_cap": false
+  },
+  "V2 + cooldown": {
+   "use_dwell": true,
+   "use_cooldown": true,
+   "use_step_cap": false
+  },
+  "V3 full (A3R)": {
+   "use_dwell": true,
+   "use_cooldown": true,
+   "use_step_cap": true
+  }
+ },
+ "conditions": [
+  {
+   "group": "E3_ablation",
+   "label": "nominal (sd 0.04)",
+   "replicates": 1000,
+   "seed": 3474952655,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V2 + cooldown": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_ablation",
+   "label": "noisy (sd 0.08)",
+   "replicates": 1000,
+   "seed": 2800128709,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V2 + cooldown": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_ablation",
+   "label": "noisy + 4 interruptions/min",
+   "replicates": 1000,
+   "seed": 2822306410,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 4.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V2 + cooldown": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_ablation",
+   "label": "persistent difficulty",
+   "replicates": 1000,
+   "seed": 2732760663,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V2 + cooldown": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=0.5",
+   "replicates": 500,
+   "seed": 2168577077,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     0.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=1.0",
+   "replicates": 500,
+   "seed": 2606165370,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     1.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=1.5",
+   "replicates": 500,
+   "seed": 3844247054,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     1.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=2.0",
+   "replicates": 500,
+   "seed": 3392718248,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     2.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=2.5",
+   "replicates": 500,
+   "seed": 3992831792,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     2.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=3.0",
+   "replicates": 500,
+   "seed": 1210972360,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     3.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=3.5",
+   "replicates": 500,
+   "seed": 4269646033,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     3.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=4.0",
+   "replicates": 500,
+   "seed": 3586687636,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     4.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=5.0",
+   "replicates": 500,
+   "seed": 309183494,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     5.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=6.0",
+   "replicates": 500,
+   "seed": 3649312173,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     6.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=8.0",
+   "replicates": 500,
+   "seed": 3692656210,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     8.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.04|d=12.0",
+   "replicates": 500,
+   "seed": 179802551,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     12.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=0.5",
+   "replicates": 500,
+   "seed": 728425272,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     0.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=1.0",
+   "replicates": 500,
+   "seed": 704483438,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     1.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=1.5",
+   "replicates": 500,
+   "seed": 3872980413,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     1.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=2.0",
+   "replicates": 500,
+   "seed": 1811491440,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     2.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=2.5",
+   "replicates": 500,
+   "seed": 3817641923,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     2.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=3.0",
+   "replicates": 500,
+   "seed": 3462720624,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     3.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=3.5",
+   "replicates": 500,
+   "seed": 4266931982,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     3.5
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=4.0",
+   "replicates": 500,
+   "seed": 1783181258,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     4.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=5.0",
+   "replicates": 500,
+   "seed": 2597203204,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     5.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=6.0",
+   "replicates": 500,
+   "seed": 2671708895,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     6.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=8.0",
+   "replicates": 500,
+   "seed": 3745062940,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     8.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E3_duration",
+   "label": "sd=0.08|d=12.0",
+   "replicates": 500,
+   "seed": 1657746125,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": [
+     12.0
+    ],
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V0 threshold only": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": false,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V1 + dwell": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": false,
+     "use_step_cap": false,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_threshold",
+   "label": "T=0.3",
+   "replicates": 500,
+   "seed": 2427053055,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.3,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_threshold",
+   "label": "T=0.35",
+   "replicates": 500,
+   "seed": 4112698702,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.35,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_threshold",
+   "label": "T=0.4",
+   "replicates": 500,
+   "seed": 2883340374,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_threshold",
+   "label": "T=0.45",
+   "replicates": 500,
+   "seed": 3116870478,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.45,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_threshold",
+   "label": "T=0.5",
+   "replicates": 500,
+   "seed": 3971673307,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.5,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=0.0",
+   "replicates": 500,
+   "seed": 3271292021,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 0.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=0.5",
+   "replicates": 500,
+   "seed": 3871275431,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 0.5,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=1.0",
+   "replicates": 500,
+   "seed": 1270234506,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 1.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=1.5",
+   "replicates": 500,
+   "seed": 1122142906,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 1.5,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=2.0",
+   "replicates": 500,
+   "seed": 4100289404,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 2.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=2.5",
+   "replicates": 500,
+   "seed": 1673230937,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 2.5,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=3.0",
+   "replicates": 500,
+   "seed": 3395701645,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=4.0",
+   "replicates": 500,
+   "seed": 3551285259,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 4.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=5.0",
+   "replicates": 500,
+   "seed": 3185276931,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 5.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_dwell",
+   "label": "D=6.0",
+   "replicates": 500,
+   "seed": 3636531390,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 6.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cooldown",
+   "label": "cooldown=0.0",
+   "replicates": 500,
+   "seed": 357907687,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 0.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cooldown",
+   "label": "cooldown=5.0",
+   "replicates": 500,
+   "seed": 1898365360,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 5.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cooldown",
+   "label": "cooldown=10.0",
+   "replicates": 500,
+   "seed": 3269838422,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 10.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cooldown",
+   "label": "cooldown=15.0",
+   "replicates": 500,
+   "seed": 3443265178,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cooldown",
+   "label": "cooldown=20.0",
+   "replicates": 500,
+   "seed": 3022892959,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 20.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cooldown",
+   "label": "cooldown=30.0",
+   "replicates": 500,
+   "seed": 3675566663,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 30.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cap",
+   "label": "cap=1",
+   "replicates": 500,
+   "seed": 632098014,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 1,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cap",
+   "label": "cap=2",
+   "replicates": 500,
+   "seed": 69830599,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 2,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cap",
+   "label": "cap=3",
+   "replicates": 500,
+   "seed": 1668298810,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cap",
+   "label": "cap=5",
+   "replicates": 500,
+   "seed": 1775964398,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 5,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_cap",
+   "label": "cap=1000",
+   "replicates": 500,
+   "seed": 3723850233,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 6.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.8,
+    "sustained_range": [
+     10.0,
+     40.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 1000,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_noise",
+   "label": "sd=0.02",
+   "replicates": 500,
+   "seed": 3004561142,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.02,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise",
+   "label": "sd=0.04",
+   "replicates": 500,
+   "seed": 540493240,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise",
+   "label": "sd=0.06",
+   "replicates": 500,
+   "seed": 4161049915,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.06,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise",
+   "label": "sd=0.08",
+   "replicates": 500,
+   "seed": 4068700469,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.08,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise",
+   "label": "sd=0.1",
+   "replicates": 500,
+   "seed": 843677044,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.1,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise",
+   "label": "sd=0.12",
+   "replicates": 500,
+   "seed": 3415043860,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.12,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise_corr",
+   "label": "rho=0.0",
+   "replicates": 500,
+   "seed": 4169356709,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.06,
+    "noise_rho": 0.0,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise_corr",
+   "label": "rho=0.5",
+   "replicates": 500,
+   "seed": 2417139504,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.06,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise_corr",
+   "label": "rho=0.8",
+   "replicates": 500,
+   "seed": 194308267,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.06,
+    "noise_rho": 0.8,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_noise_corr",
+   "label": "rho=0.95",
+   "replicates": 500,
+   "seed": 229213837,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.06,
+    "noise_rho": 0.95,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_dropout",
+   "label": "rate=0.0/min",
+   "replicates": 500,
+   "seed": 2836430102,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_dropout",
+   "label": "rate=1.0/min",
+   "replicates": 500,
+   "seed": 2074129564,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 1.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_dropout",
+   "label": "rate=2.0/min",
+   "replicates": 500,
+   "seed": 645175155,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 2.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_dropout",
+   "label": "rate=4.0/min",
+   "replicates": 500,
+   "seed": 4294076476,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 4.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_dropout",
+   "label": "rate=8.0/min",
+   "replicates": 500,
+   "seed": 1873454722,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 8.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3 full (A3R)": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    },
+    "V3 + hysteresis 0.05": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "reset"
+    },
+    "V3 + hold on dropout": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "hold"
+    },
+    "V3 + both": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.05,
+     "dropout_policy": "hold"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_rate",
+   "label": "f_mp=2.0",
+   "replicates": 500,
+   "seed": 847246260,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_rate",
+   "label": "f_mp=3.0",
+   "replicates": 500,
+   "seed": 2628199217,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_rate",
+   "label": "f_mp=4.5",
+   "replicates": 500,
+   "seed": 4228772438,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_rate",
+   "label": "f_mp=6.0",
+   "replicates": 500,
+   "seed": 842350952,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_rate",
+   "label": "f_mp=10.0",
+   "replicates": 500,
+   "seed": 3699706694,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_update_interval",
+   "label": "interval=0.25",
+   "replicates": 500,
+   "seed": 3344617145,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.25,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_update_interval",
+   "label": "interval=0.5",
+   "replicates": 500,
+   "seed": 2479406076,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_update_interval",
+   "label": "interval=1.0",
+   "replicates": 500,
+   "seed": 46535648,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 1.0,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_jitter",
+   "label": "jitter=0.0",
+   "replicates": 500,
+   "seed": 3815910344,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.0,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_jitter",
+   "label": "jitter=0.2",
+   "replicates": 500,
+   "seed": 2416269738,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_mp_jitter",
+   "label": "jitter=0.5",
+   "replicates": 500,
+   "seed": 1736900684,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.5,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_delay",
+   "label": "delay=0.0",
+   "replicates": 500,
+   "seed": 1704958405,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_delay",
+   "label": "delay=0.1",
+   "replicates": 500,
+   "seed": 2603300593,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.1,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_delay",
+   "label": "delay=0.25",
+   "replicates": 500,
+   "seed": 1196987240,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.25,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_delay",
+   "label": "delay=0.5",
+   "replicates": 500,
+   "seed": 2139910469,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 0.5,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  },
+  {
+   "group": "E4_delay",
+   "label": "delay=1.0",
+   "replicates": 500,
+   "seed": 242018231,
+   "sim": {
+    "duration": 120.0,
+    "gap_mean": 12.0,
+    "gap_min": 3.0,
+    "p_sustained": 0.3,
+    "sustained_range": [
+     5.0,
+     20.0
+    ],
+    "transient_range": [
+     0.2,
+     2.0
+    ],
+    "fixed_durations": null,
+    "tau": 0.3,
+    "T": 0.4,
+    "base_margin": [
+     0.06,
+     0.18
+    ],
+    "elev_margin": [
+     0.05,
+     0.2
+    ],
+    "noise_sd": 0.04,
+    "noise_rho": 0.5,
+    "f_mp": 4.5,
+    "mp_jitter": 0.2,
+    "latency": [
+     0.015,
+     0.045
+    ],
+    "extra_delay": 1.0,
+    "update_interval": 0.5,
+    "frame_quant": 0.016666666666666666,
+    "dropout_rate": 0.0,
+    "dropout_range": [
+     0.3,
+     3.0
+    ]
+   },
+   "controllers": {
+    "V3": {
+     "t_conf": 0.4,
+     "t_frust": 0.65,
+     "dwell": 3.0,
+     "cooldown": 15.0,
+     "max_per_step": 3,
+     "use_dwell": true,
+     "use_cooldown": true,
+     "use_step_cap": true,
+     "hysteresis": 0.0,
+     "dropout_policy": "reset"
+    }
+   }
+  }
+ ]
+}

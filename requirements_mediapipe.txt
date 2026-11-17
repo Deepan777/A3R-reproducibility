@@ -1,0 +1,4 @@
+mediapipe==0.10.14   # separate environment for exp7/exp8 export only (pulls jax; keep apart from the pinned analysis env)
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1

@@ -1,0 +1,16 @@
+{
+ "feature_sets": 2396,
+ "max_abs_diff_B": 1.995932540521661e-06,
+ "max_abs_diff_E": 1.7209422886743653e-07,
+ "max_abs_diff_M": 3.8124271393158438e-06,
+ "max_abs_diff_yaw": 2.321260506032985e-07,
+ "max_abs_diff_pitch": 2.355221713212785e-07,
+ "max_abs_diff_C": 1.807046498603082e-06,
+ "max_abs_diff_F": 2.0946781640884815e-06,
+ "gate_decision_mismatches": 0,
+ "threshold_decision_mismatches_C_gt_0.40": 0,
+ "traces": 1000,
+ "fires_python": 1534,
+ "fires_csharp": 1534,
+ "traces_with_different_fire_times": 0
+}

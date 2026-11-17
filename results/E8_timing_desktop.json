@@ -1,0 +1,8 @@
+{
+ "platform": "desktop .NET 8 (x64, Release), Windows 11 analysis PC - NOT a phone",
+ "feature_extract_mean_us": 0.368,
+ "controller_update_mean_us": 0.168,
+ "feature_sets": 2396, "extract_repetitions": 200,
+ "controller_updates": 235726,
+ "note": "Stub FindFirstObjectByType is a dictionary lookup; in Unity it searches the scene on every UpdateAffectScores call, so on-device cost will be higher."
+}

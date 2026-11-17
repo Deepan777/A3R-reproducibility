@@ -85,6 +85,10 @@ The .NET 8 SDK is required.
 4. Run `dotnet run -c Release -- <path to parity_run>` in the build folder.
 5. Run `python experiments/exp8_compare_parity.py parity_run results/E8_parity_summary.json`.
 
+## Licence
+
+The code and result files are released under the MIT License (see `LICENSE`). The third-party data listed below keep their own licences.
+
 ## Third-party data
 
 * `results/canonical_face_468.csv` is recovered from the MediaPipe FaceLandmarker model bundled with the app (MediaPipe, Apache License 2.0).
